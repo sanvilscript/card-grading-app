@@ -1,5 +1,6 @@
-const API_URL = 'https://api.ximilar.com/card-grader/v2';
-const API_TOKEN = '4262ab15b38bfea843019bd8dc62f6d26d3d8658';
+// Load configuration
+const API_URL = CONFIG.API_URL;
+const API_TOKEN = CONFIG.API_TOKEN;
 
 let currentImageBase64 = null;
 let currentMode = 'centering'; // 'centering', 'grading', or 'condition'

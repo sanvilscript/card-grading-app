@@ -73,10 +73,19 @@ Professional card grading tools powered by AI for Trading Card Game (TCG) and Sp
 1. Clone the repository:
 ```bash
 git clone https://github.com/sanvilscript/card-grading-app.git
-cd card-grading-app
+cd card-grading-app/cctools
 ```
 
-2. Open `index.html` in your browser or serve with a local server:
+2. Configure your API token:
+```bash
+# Copy the example config file
+cp config.example.js config.js
+
+# Edit config.js and add your Ximilar API token
+# Get your token from: https://app.ximilar.com
+```
+
+3. Open `index.html` in your browser or serve with a local server:
 ```bash
 # Using Python
 python -m http.server 8000
@@ -85,7 +94,14 @@ python -m http.server 8000
 npx serve
 ```
 
-3. Upload a card image and select your analysis mode!
+4. Upload a card image and select your analysis mode!
+
+### 🔐 API Token Security
+
+- The `config.js` file contains your API token and is **ignored by git**
+- Never commit `config.js` to the repository
+- Use `config.example.js` as a template for new installations
+- Keep your API token private and secure
 
 ## 📊 API Integration
 
