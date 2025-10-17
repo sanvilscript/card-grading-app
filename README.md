@@ -138,5 +138,5 @@ For support or questions, please open an issue on GitHub.
 ---
 
 **Version**: 1.1  
-**Last Updated**: January 2025  
+**Last Updated**: October 2025  
 **Status**: Active Development

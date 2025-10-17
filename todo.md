@@ -542,5 +542,5 @@ pip install tensorflow-lite
 
 ---
 
-**Last Updated**: January 2025  
+**Last Updated**: October 2025  
 **Status**: Active Development Guide
