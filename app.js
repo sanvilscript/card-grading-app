@@ -82,8 +82,10 @@ function switchMode(mode) {
         modeDescription.textContent = 'Evaluate card condition (TCGPlayer scale)';
     }
     
+    // Reset UI when switching modes
     hideResults();
     hideError();
+    hidePreview();
 }
 
 // Upload & Preview
@@ -528,4 +530,11 @@ function hideError() {
 
 function hideResults() {
     results.classList.add('hidden');
+}
+
+function hidePreview() {
+    preview.classList.add('hidden');
+    actionButtons.classList.add('hidden');
+    currentImageBase64 = null;
+    imageInput.value = '';
 }
