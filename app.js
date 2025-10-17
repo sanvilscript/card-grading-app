@@ -172,8 +172,10 @@ async function analyzeCentering() {
         
         if (data.status.code === 200 && data.records[0]) {
             displayCenteringResults(data.records[0]);
+        } else if (data.status.code === 401) {
+            throw new Error('Invalid API token or credits exhausted. Please check your Ximilar account at https://app.ximilar.com');
         } else {
-            throw new Error('Analysis error');
+            throw new Error(data.status.text || 'Analysis error');
         }
     } catch (err) {
         showError('Error during centering analysis: ' + err.message);
@@ -205,8 +207,10 @@ async function analyzeGrading() {
         
         if (data.status.code === 200 && data.records[0]) {
             displayGradingResults(data.records[0]);
+        } else if (data.status.code === 401) {
+            throw new Error('Invalid API token or credits exhausted. Please check your Ximilar account at https://app.ximilar.com');
         } else {
-            throw new Error('Analysis error');
+            throw new Error(data.status.text || 'Analysis error');
         }
     } catch (err) {
         showError('Error during complete grading: ' + err.message);
@@ -239,8 +243,10 @@ async function analyzeCondition() {
         
         if (data.status.code === 200 && data.records[0]) {
             displayConditionResults(data.records[0]);
+        } else if (data.status.code === 401) {
+            throw new Error('Invalid API token or credits exhausted. Please check your Ximilar account at https://app.ximilar.com');
         } else {
-            throw new Error('Analysis error');
+            throw new Error(data.status.text || 'Analysis error');
         }
     } catch (err) {
         showError('Error during condition analysis: ' + err.message);
